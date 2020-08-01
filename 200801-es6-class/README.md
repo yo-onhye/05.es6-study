@@ -4,6 +4,9 @@
 
 ES5 사용하여 DOM을 제어로 만들기
 
+### 작업페이지
+https://yo-onhye.github.io/05.es6-study/200801-es6-class/class-DOM-sixbox/index.html
+
 ### animation 효과를 줄때 주의할 점
 
 - 자식요소에 transform으로 요소의 위치를 제어
@@ -25,6 +28,9 @@ ES5 사용하여 DOM을 제어로 만들기
 
 ES5 사용하여 DOM을 제어로 만들기
 
+### 작업페이지
+https://yo-onhye.github.io/05.es6-study/200801-es6-class/class-DOM-tab/index.html
+
 ### classList를 사용하여 함수 정의
 
 addClass, removeClass, hasClass, togleClass 대신 사용할 수 있는 방법이 classList 속성이다.
@@ -38,6 +44,9 @@ item.classList.remove("on");
 ## Tab 메뉴 만들기 (ES5-prototype)
 
 ES5 사용하여 prototype 형식으로 만들기
+
+### 작업페이지
+https://yo-onhye.github.io/05.es6-study/200801-es6-class/class-prototype-tab/index.html
 
 ### prototype 생성
 
@@ -57,3 +66,6 @@ ES5 사용하여 prototype 형식으로 만들기
 ## Tab 메뉴 만들기 (ES6)
 
 ES6 사용하여 만들기
+
+### 작업페이지
+https://yo-onhye.github.io/05.es6-study/200801-es6-class/class-es6-tab/index.html
