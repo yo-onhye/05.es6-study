@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	perspective: 800px;
+}
+
+section:nth-of-type(1) {
+	height: 100vh;
+	background: pink;
+}
+section:nth-of-type(2) {
+	height: 50vh;
+	background: orange;
+}
+section:nth-of-type(3) {
+	height: 70vh;
+	background: aqua;
+}
+section:nth-of-type(4) {
+	height: 100vh;
+	background: violet;
+}
+
+ul {
+	position: fixed;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+}
+ul > li {
+	width: 20px;
+	height: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: #fff;
+	transition: 0.5s;
+	cursor: pointer;
+}
+ul > li:last-child {
+	margin-bottom: 0;
+}
+ul > li.on {
+	height: 100px;
+	background: #222;
+}
+
+.box2 {
+	width: 600px;
+	height: 200px;
+	background: #222;
+	opacity: 0;
+	transform: rotateY(180deg);
+	transition: 0.5s;
+}
+section.on .box2 {
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+/*
+	특정 섹션의 offsetTop 값의 브라우저 상단 끝에 닿아야지 버튼이 활성화 되기 때문에 제일 마지막 박스의 높이값은 무조건 브라우저 높아값 보다 커야됨
+*/
