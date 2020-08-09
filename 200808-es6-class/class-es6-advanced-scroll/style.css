@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background: #ffd1dc;
+	transition: background 1s ease;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+.contens_wrap {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	background-color: transparent;
+	background-image: none;
+	perspective: 800px;
+}
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px 0;
+	box-sizing: border-box;
+	perspective: 800px;
+	transform-style: preserve-3d;
+}
+
+section:nth-of-type(3) {
+	display: block;
+}
+
+/* mouse */
+.mouse {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	display: block;
+	margin: 0 auto;
+	margin-left: -26px;
+	width: 26px;
+	height: 46px;
+	border-radius: 13px;
+	background: rgb(255 255 255 / 0.9);
+}
+.mouse span {
+	display: block;
+	margin: 6px auto;
+	width: 2px;
+	height: 2px;
+	border-radius: 4px;
+	background: rgb(183 183 183 / 0.5);
+	border: 1px solid transparent;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: scroll;
+	animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+		transform: translateY(20px);
+	}
+}
+@keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+		-ms-transform: translateY(20px);
+		transform: translateY(20px);
+	}
+}
+
+/* textani */
+.textani_1 {
+	color: #fcfcfc;
+	font-size: 7rem;
+	line-height: 9rem;
+	text-align: center;
+	text-shadow: 15px 15px rgb(183 183 183 / 0.76);
+}
+.textani_1 .text_sub {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 0 15px;
+	font-size: 6rem;
+	vertical-align: top;
+}
+.textani_1 .text_sub:before {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: #fcfcfc;
+	box-shadow: 4px 4px rgb(183 183 183 / 0.5);
+	content: "";
+}
+.textani_1 .text_tit {
+	display: block;
+}
+.textani_1_1 {
+	position: relative;
+	margin-top: 50px;
+	color: #fcfcfc;
+	font-size: 3rem;
+	line-height: 5rem;
+	letter-spacing: 5px;
+}
+.textani_1_1 .textani_1_ani {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #fcfcfc;
+	transition: width 1s ease-out;
+}
+.textani_1_1.ty2 .textani_1_ani {
+	transition-delay: 0.3s;
+}
+.textani_2 {
+	width: 100%;
+	font-family: "Work Sans", sans-serif;
+	color: #fcfcfc;
+	font-size: 13rem;
+	line-height: 13rem;
+	font-weight: 800;
+	line-height: 18rem;
+	text-align: left;
+	transform: scale3d(0.502, 0.502, 1) skew(-9.96667deg, 0deg);
+	text-transform: uppercase;
+	text-shadow: 15px 15px rgb(183 183 183 / 0.76);
+	transform-style: preserve-3d;
+}
+.textani_3 {
+	position: relative;
+	display: block;
+	width: 100%;
+	font-family: "Work Sans", sans-serif;
+	color: #5e5d56;
+	font-size: 12rem;
+	line-height: 12rem;
+	font-weight: 700;
+	text-transform: capitalize;
+	opacity: 0;
+}
+.textani_toright {
+	left: -55%;
+	text-align: right;
+	transform: skew(14.403deg, 0deg);
+}
+.textani_toright.ty2 {
+	left: -70%;
+}
+.textani_toright.ty3 {
+	left: -80%;
+}
+.textani_toleft {
+	right: -70%;
+	text-align: left;
+	transform: skew(-10.82deg, 0deg);
+}
+.textani_toleft.ty2 {
+	right: -80%;
+}
+.textani_toleft.ty3 {
+	right: -90%;
+}
+.textani_4 {
+	width: 600px;
+	font-family: "Work Sans", sans-serif;
+	color: #fcfcfc;
+	font-size: 100px;
+	line-height: 1.5;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 15px 15px rgb(183 183 183 / 0.76);
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	transition: 0.5s;
+	opacity: 0;
+}

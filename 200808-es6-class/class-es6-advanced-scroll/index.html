@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<title>Scroll UI</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script src="./scrollAnimation.js"></script>
+		<script>
+			window.onload = () => {
+				new ScrollAnimation({
+					boxs: "section",
+					background: "body",
+					textsubani: ".textani_1_ani",
+					textani2: ".textani_2",
+					textaniright: ".textani_toright",
+					textanileft: ".textani_toleft",
+					textani4: ".textani_4",
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<main class="contens_wrap">
+			<section class="on">
+				<h1 class="textani_1">
+					<span class="text_sub">I'M A</span>
+					<span class="text_tit">DEVELOPER</span>
+				</h1>
+				<p class="textani_1_1">Nice to meet u!<span class="textani_1_ani"></span></p>
+				<p class="textani_1_1 ty2">Have a nice day :D<span class="textani_1_ani"></span></p>
+				<div class="mouse">
+					<span></span>
+				</div>
+			</section>
+			<section>
+				<p class="textani_2">Hello Nice to meet u :D</p>
+			</section>
+			<section>
+				<span class="textani_3 textani_toright">Hello</span>
+				<span class="textani_3 textani_toleft">Hola</span>
+				<span class="textani_3 textani_toright ty2">Bonjour</span>
+				<span class="textani_3 textani_toleft ty2">Guten Tag</span>
+				<span class="textani_3 textani_toright ty3">Namaste</span>
+				<span class="textani_3 textani_toleft ty3">Ni Hau</span>
+			</section>
+			<section>
+				<div class="textani_4">
+					Thank U,<br />
+					Bye ;)
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

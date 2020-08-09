@@ -14,6 +14,10 @@ https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-function-scro
 
 https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-class-scroll/index.html
 
+**수업 응용 작업물**
+
+https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-advanced-scroll/index.html
+
 ### Arrow function
 
 - function 키워드 대신 화살표(=>)를 사용하여 함수를 선언
