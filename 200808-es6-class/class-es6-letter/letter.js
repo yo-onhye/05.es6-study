@@ -12,6 +12,7 @@ var letterJS = (selector) => {
 		newSpan.classList.add("s" + index);
 		newSpan.innerText = i;
 		newSpan.style.transitionDelay = 0.1 * index + "s";
+		newSpan.style.animationDelay = 0.1 * index + "s";
 		// stretch를 이용하여 문자열 크기를 설정하면 될것 같다!
 		wrap.appendChild(newSpan);
 		index++;
@@ -20,3 +21,4 @@ var letterJS = (selector) => {
 
 letterJS("#title");
 letterJS("#title2");
+letterJS("#title3");
