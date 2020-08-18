@@ -133,8 +133,25 @@ section:nth-of-type(3) {
 	content: "";
 }
 .textani_1 .text_tit {
+	overflow: hidden;
 	display: block;
+	padding: 0 20px;
 }
+.textani_1 .text_tit span {
+	display: inline-block;
+	transform: translateY(100%);
+	animation: appear 0.2s forwards;
+}
+
+@keyframes appear {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
 .textani_1_1 {
 	position: relative;
 	margin-top: 50px;
@@ -153,7 +170,7 @@ section:nth-of-type(3) {
 	transition: width 1s ease-out;
 }
 .textani_1_1.ty2 .textani_1_ani {
-	transition-delay: 0.3s;
+	transition-delay: 1s;
 }
 .textani_2 {
 	width: 100%;

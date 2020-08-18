@@ -8,6 +8,7 @@ class ScrollAnimation {
 	initDOM(option) {
 		this.secs = document.querySelectorAll(option.boxs);
 		this.background = document.querySelector(option.background);
+		this.texttit = document.querySelector(option.texttit);
 		this.textsubani = document.querySelectorAll(option.textsubani);
 		this.textani2 = document.querySelector(option.textani2);
 		this.textaniright = document.querySelectorAll(option.textaniright);
@@ -19,6 +20,7 @@ class ScrollAnimation {
 		this.scroll = 0;
 		this.base = -300;
 		this.timer;
+		this.is_appear = false;
 	}
 
 	setPos() {
@@ -68,8 +70,27 @@ class ScrollAnimation {
 		}
 	}
 
+	letterJS(selector) {
+		let str = selector.innerText;
+		selector.innerText = "";
+		let index = 0;
+
+		for (let i of str) {
+			let newSpan = document.createElement("span");
+			newSpan.classList.add("s" + index);
+			newSpan.innerText = i;
+			newSpan.style.animationDelay = 0.2 * index + "s";
+			selector.appendChild(newSpan);
+			index++;
+		}
+	}
+
 	section1(scroll) {
 		if (scroll >= this.offs[0] && scroll < this.offs[1]) {
+			if (!this.is_appear) {
+				this.letterJS(this.texttit);
+				this.is_appear = true;
+			}
 			this.textsubani.forEach((item, index) => {
 				this.textsubani[index].style.width = "0";
 			});
