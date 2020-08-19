@@ -17,7 +17,12 @@ let result_url = `${url}method=${interest}&api_key=${key}&per_page=${per_page}&t
 // 브라우저 로딩 시
 fetchData(result_url)
 	.then((data) => createDOM(data))
-	.catch((error) => console.log(error));
+	.catch((error) => console.log(error))
+	.then(() => {
+		setTimeout(() => {
+			isoLayout(wrap);
+		}, 500);
+	});
 
 // 검색 버튼 클릭 시
 $btn.onclick = () => {
@@ -28,7 +33,12 @@ $btn.onclick = () => {
 
 	fetchData(result_url)
 		.then((data) => createDOM(data))
-		.catch((error) => console.log(error));
+		.catch((error) => console.log(error))
+		.then(() => {
+			setTimeout(() => {
+				isoLayout(wrap);
+			}, 500);
+		});
 };
 
 /*----------- 함수 정의 -----------*/
@@ -51,6 +61,7 @@ function createDOM(data) {
 		new_a.setAttributeNode(new_href);
 		new_img.setAttributeNode(new_src);
 		new_p.innerText = data.title;
+		new_li.classList.add("item");
 
 		wrap.appendChild(new_li);
 		new_li.appendChild(new_div);
@@ -79,4 +90,33 @@ function fetchData(url) {
 				return Promise.reject(Error("json is undefined!!!"));
 			}
 		});
+}
+
+function letterJS(selector) {
+	const wrap = document.querySelector(selector);
+	let str = wrap.innerText;
+	wrap.innerText = "";
+	let index = 0;
+
+	for (let i of str) {
+		let newSpan = document.createElement("span");
+		newSpan.classList.add("s" + index);
+		newSpan.innerText = i;
+		newSpan.style.transitionDelay = 0.1 * index + "s";
+		newSpan.style.animationDelay = 0.1 * index + "s";
+		wrap.appendChild(newSpan);
+		index++;
+	}
+}
+
+letterJS(".logo");
+
+function isoLayout(target) {
+	console.log(target);
+	new Isotope(target, {
+		itemSelector: ".item",
+		columnWidth: ".item",
+		transitionDuration: "0.5s",
+		percentPosition: true,
+	});
 }
