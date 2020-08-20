@@ -6,8 +6,13 @@ Flickr API 사용하여 이미지 검색 및 결과 리스트 구현
 
 ### 작업페이지
 
-https://yo-onhye.github.io/05.es6-study/200815-es6-class/class-es6-flickr/index.html
+**fuction type**
 
+https://yo-onhye.github.io/05.es6-study/200815-es6-class/class-es6-function-flickr/index.html
+
+**class type**
+
+https://yo-onhye.github.io/05.es6-study/200815-es6-class/class-es6-class-flickr/index.html
 
 ### Flickr API 사용하기
 
