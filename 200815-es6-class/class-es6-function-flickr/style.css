@@ -264,6 +264,13 @@ body {
 	line-height: 18px;
 }
 
+.alert {
+	margin: 50px 0;
+	color: #2f332f;
+	font-size: 18px;
+	text-align: center;
+}
+
 @media screen and (max-width: 1599px) {
 }
 @media screen and (max-width: 1399px) {

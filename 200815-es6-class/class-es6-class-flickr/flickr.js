@@ -73,6 +73,8 @@ class Flickr {
 		this.$list.innerHTML = "";
 		this.$wrap.classList.remove("on");
 
+		console.log(data.length);
+
 		item.map((data, index) => {
 			let new_li = document.createElement("li");
 			let new_div = document.createElement("div");

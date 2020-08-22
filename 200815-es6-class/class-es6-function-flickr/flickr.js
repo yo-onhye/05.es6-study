@@ -1,4 +1,5 @@
 // 전역변수 설정
+const content = document.querySelector(".content");
 const wrap = document.querySelector("#list");
 const $btn = document.querySelector(".searchBtn");
 const $input = document.querySelector("#search");
@@ -46,29 +47,39 @@ $btn.onclick = () => {
 function createDOM(data) {
 	let item = data.photos.photo;
 	wrap.innerHTML = "";
-	// 배열의 갯수만큼 반복을 돌면서 태그,속성노드생성
-	item.map((data, index) => {
-		let new_li = document.createElement("li");
-		let new_div = document.createElement("div");
-		let new_a = document.createElement("a");
-		let new_img = document.createElement("img");
-		let new_p = document.createElement("p");
-		let new_href = document.createAttribute("href");
-		let new_src = document.createAttribute("src");
-		new_href.value = `https://farm${data.farm}.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`;
-		new_src.value = `https://farm${data.farm}.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`;
+	if (item.length > 0) {
+		wrap.style.display = "block";
+		document.querySelector(".alert").style.display = "none";
+		// 배열의 갯수만큼 반복을 돌면서 태그,속성노드생성
+		item.map((data, index) => {
+			let new_li = document.createElement("li");
+			let new_div = document.createElement("div");
+			let new_a = document.createElement("a");
+			let new_img = document.createElement("img");
+			let new_p = document.createElement("p");
+			let new_href = document.createAttribute("href");
+			let new_src = document.createAttribute("src");
+			new_href.value = `https://farm${data.farm}.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`;
+			new_src.value = `https://farm${data.farm}.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`;
 
-		new_a.setAttributeNode(new_href);
-		new_img.setAttributeNode(new_src);
-		new_p.innerText = data.title;
-		new_li.classList.add("item");
+			new_a.setAttributeNode(new_href);
+			new_img.setAttributeNode(new_src);
+			new_p.innerText = data.title;
+			new_li.classList.add("item");
 
-		wrap.appendChild(new_li);
-		new_li.appendChild(new_div);
-		new_div.appendChild(new_a);
-		new_div.appendChild(new_p);
-		new_a.appendChild(new_img);
-	});
+			wrap.appendChild(new_li);
+			new_li.appendChild(new_div);
+			new_div.appendChild(new_a);
+			new_div.appendChild(new_p);
+			new_a.appendChild(new_img);
+		});
+	} else {
+		let new_alert = document.createElement("p");
+		new_alert.classList.add("alert");
+		new_alert.innerHTML = "검색 결과가 없습니다.";
+		content.appendChild(new_alert);
+		wrap.style.display = "none";
+	}
 }
 
 // 데이터호출함수 정의
