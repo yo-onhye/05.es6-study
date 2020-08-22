@@ -3,6 +3,7 @@ const content = document.querySelector(".content");
 const wrap = document.querySelector("#list");
 const $btn = document.querySelector(".searchBtn");
 const $input = document.querySelector("#search");
+const alert = document.querySelector(".alert");
 const url = "https://www.flickr.com/services/rest/?";
 const interest = "flickr.interestingness.getList"; // 검색량이 많은 이미지 호출 메서드
 const search = "flickr.photos.search"; // 태그검색 이미지 호출 메서드
@@ -13,6 +14,7 @@ const privacy_filter = 5; // 이미지 보안수준
 const format = "json"; // 데이터포맷
 const nojsoncallback = 1; // 오류방지
 let result_url = `${url}method=${interest}&api_key=${key}&per_page=${per_page}&tagmode=${tagmode}&privacy_filter=${privacy_filter}&format=${format}&nojsoncallback=${nojsoncallback}`;
+let tag = "";
 
 /*----------- 이벤트 연결 -----------*/
 // 브라우저 로딩 시
@@ -27,7 +29,7 @@ fetchData(result_url)
 
 // 검색 버튼 클릭 시
 $btn.onclick = () => {
-	let tag = $input.value;
+	tag = $input.value;
 	$input.value = "";
 
 	result_url = `${url}method=${search}&api_key=${key}&per_page=${per_page}&tagmode=${tagmode}&privacy_filter=${privacy_filter}&format=${format}&nojsoncallback=${nojsoncallback}&tags=${tag}`;
@@ -49,7 +51,7 @@ function createDOM(data) {
 	wrap.innerHTML = "";
 	if (item.length > 0) {
 		wrap.style.display = "block";
-		document.querySelector(".alert").style.display = "none";
+		alert.style.display = "none";
 		// 배열의 갯수만큼 반복을 돌면서 태그,속성노드생성
 		item.map((data, index) => {
 			let new_li = document.createElement("li");
@@ -74,10 +76,8 @@ function createDOM(data) {
 			new_a.appendChild(new_img);
 		});
 	} else {
-		let new_alert = document.createElement("p");
-		new_alert.classList.add("alert");
-		new_alert.innerHTML = "검색 결과가 없습니다.";
-		content.appendChild(new_alert);
+		alert.innerHTML = tag + "에 대한 검색 결과가 없습니다.";
+		alert.style.display = "block";
 		wrap.style.display = "none";
 	}
 }
@@ -123,7 +123,6 @@ function letterJS(selector) {
 letterJS(".logo");
 
 function isoLayout(target) {
-	console.log(target);
 	new Isotope(target, {
 		itemSelector: ".item",
 		columnWidth: ".item",
