@@ -2,7 +2,7 @@
 
 ### 📅수업기간
 
-2020.08.01 ~ 08.29
+2020.08.01 ~ 08.22
 
 ---
 
@@ -20,3 +20,7 @@ https://github.com/yo-onhye/05.es6-study/tree/master/200808-es6-class
 **20.08.15 Flickr API 사용하여 이미지 갤러리 UI 만들기**
 
 https://github.com/yo-onhye/05.es6-study/tree/master/200815-es6-class
+
+**20.08.22 CRUD 기능이 있는 게시판 UI 만들기**
+
+https://github.com/yo-onhye/05.es6-study/tree/master/200822-es6-class
