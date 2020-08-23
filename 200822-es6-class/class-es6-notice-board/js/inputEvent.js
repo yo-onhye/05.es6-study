@@ -1,7 +1,6 @@
 export default class {
 	constructor({ save, motion }) {
 		//해당 클래스로 인스턴스 생성시 외부에서 콜백을 전달받음
-		//let self = this;
 		this.$title = document.getElementById("title");
 		this.$content = document.getElementById("content");
 		this.$btn = document.getElementById("send");
@@ -9,7 +8,7 @@ export default class {
 		this.save = save;
 		this.motion = motion;
 
-		let self = this;
+		let self = this; // 이벤트가 발생한 객체를 저장
 		self.$btn.onclick = function () {
 			//버튼을 클릭시 해당요소의 value값으 구함
 			let titleValue = self.$title.value;

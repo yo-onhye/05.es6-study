@@ -20,20 +20,19 @@ export default class {
 			let item = document.createElement("div");
 			item.classList.add("post");
 			let tags = `
-					<div class="tit">			
-						<h2>${data.title}</h2>					
-						<span>${data.date}</span>	
+					<div class="tit">
+						<h2>${data.title}</h2>
+						<span>${data.date}</span>
 						<input type="button" class="btnToggle" value="+" />
 					</div>
 					<div class="con">
 						<p>${data.content}</p>
 						<input class="btnModify" type="button" value="modify" />
-						<input class="btnDel" type="button" value="delete" />	
-					</div>				
+						<input class="btnDel" type="button" value="delete" />
+					</div>
 			`;
 			item.innerHTML = tags;
 			self.$showBox.appendChild(item);
-			//self.$showBox.insertBefore(item, self.$showBox.firstChild);
 
 			//삭제버튼 갯수만큼 반복을 돌면서 즉시실행함수로 해당버튼 클릭시 순서값을 콜백으로 넘어온 del함수에 인수로 넣음
 			let $btnDel = document.getElementsByClassName("btnDel");

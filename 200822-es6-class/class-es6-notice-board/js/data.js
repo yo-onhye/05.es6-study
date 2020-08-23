@@ -1,21 +1,21 @@
 export default class {
-	//생성자 함수로 데이터가 저장될 빈 배열을 생성
+	//생성자 함수로 데이터가 저장될 배열을 생성
 	constructor() {
 		this._db = [
 			{
 				title: "What is Lorem Ipsum?",
 				content: "content1 dummy contents come here in detail.<br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  ",
-				date: "2018-09-15",
+				date: "2020-08-15",
 			},
 			{
 				title: "Where does it come from?",
 				content: "Contrary to popular belief, Lorem Ipsum is not simply random text. <br><br>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br><br>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
-				date: "2018-09-16",
+				date: "2020-08-16",
 			},
 			{
 				title: "Why do we use it?",
 				content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br><br> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
-				date: "2018-09-17",
+				date: "2020-08-17",
 			},
 		];
 	}
