@@ -24,7 +24,7 @@ https://github.com/yo-onhye/05.es6-study/tree/master/200822-es6-class
 
 ### 🚩 Advanced
 
-- Scroll UI를 이용하여 포트폴리오 사이트 만들기
+- [Scroll UI를 이용하여 포트폴리오 사이트 만들기](https://github.com/yo-onhye/00.project-portfolio) `작업중`
 - [Text Animation 5가지 이상 구현해보기](https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-neon-letter/index.html)
 - [Flickr API 사용 이미지 갤러리 React로 구현하기](https://github.com/yo-onhye/07.project-img-search)
 - CRUD 기능 게시판 React로 구현하기
