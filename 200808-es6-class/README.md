@@ -22,6 +22,10 @@ https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-advanced-scro
 
 https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-letter/index.html
 
+**Neon Letter Animation UI**
+
+https://yo-onhye.github.io/05.es6-study/200808-es6-class/class-es6-neon-letter/index.html
+
 ### Arrow function
 
 - function 키워드 대신 화살표(=>)를 사용하여 함수를 선언
